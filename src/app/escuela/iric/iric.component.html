@@ -1,0 +1,64 @@
+<div class="card">
+  <div class="card-header">
+    Alumnos IRIC
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2">Filtrar por:</div>
+      <div class="col-md-4">
+        <input [(ngModel)]="listFilter" type="text" name="filter" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Filtro: {{listFilter}}</h3>
+        <div class="table-responsive">
+          <button (click)="showImagen()" class="btn btn-primary">
+            {{muestraImagen?'Ocular':'Mostrar'}} Imagen
+          </button>
+            <table class="table" *ngIf="alumnosIRIC">
+            <!-- <table class="table"> -->
+            <thead>
+              <tr>
+                <th>Foto</th>
+                <th>Matricula</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Correo</th>
+                <th>Pago</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let alumno of alumnosIRIC">
+                <td>
+                  <img
+                  *ngIf="muestraImagen"
+                  [title]="alumno.nombre"
+                  [style.width.px]="imageWith"
+                  [style.margin.px]="imageMargin"
+                  [src]="alumno.foto"
+                  alt="">
+                </td>
+                <td>
+                  {{alumno.matricula}}
+                </td>
+                <td>
+                  {{alumno.nombre}}
+                </td>
+                <td>
+                  {{alumno.edad}}
+                </td>
+                <td>
+                  {{alumno.correo}}
+                </td>
+                <td>
+                  {{alumno.pago}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
