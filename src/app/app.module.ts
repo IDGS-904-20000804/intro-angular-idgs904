@@ -7,6 +7,9 @@ import { IEVNComponent } from './escuela/ievn/ievn.component';
 import { IRICComponent } from './escuela/iric/iric.component';
 import { MenuComponent } from './escuela/menu/menu.component';
 import { FormsModule } from '@angular/forms';
+import { SumarComponent } from './escuela/formularios/sumar/sumar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OperasModule } from './escuela/formularios/operas/operas.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,16 @@ import { FormsModule } from '@angular/forms';
     EscuelaComponent,
     IEVNComponent,
     IRICComponent,
-    MenuComponent
+    MenuComponent,
+    SumarComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    // FormsModule es usado para enlace bidireccional y usar el filter
+    FormsModule,
+    BrowserAnimationsModule,
+    // Importacon de un modulo creado
+    OperasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
