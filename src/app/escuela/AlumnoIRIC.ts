@@ -5,4 +5,5 @@ export interface AlumnoIRIC{
     correo: string;
     pago: number;
     foto: string;
+    calif: number;
 }
