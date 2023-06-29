@@ -12,6 +12,7 @@ export class IRICComponent {
   imageMargin: number = 2;
   muestraImagen: boolean = true;
   listFilter: string = '';
+  alumnoTitle!: string;
   // alumnos: any[] = [];
   alumnosIRIC: AlumnoIRIC[] = [
     {
@@ -21,7 +22,7 @@ export class IRICComponent {
       "correo": 'ivan@gmail.com',
       "pago": 12312.33,
       "foto": 'https://randomuser.me/api/portraits/men/1.jpg',
-      "calif": 10,
+      "calif": 6.7,
     },
     {
       "matricula": 20009998,
@@ -30,7 +31,7 @@ export class IRICComponent {
       "correo": 'maria@gmail.com',
       "pago": 5321.5,
       "foto": 'https://randomuser.me/api/portraits/women/2.jpg',
-      "calif": 9,
+      "calif": 4.8,
     },
     {
       "matricula": 20009997,
@@ -39,11 +40,15 @@ export class IRICComponent {
       "correo": 'juan@gmail.com',
       "pago": 7542.89,
       "foto": 'https://randomuser.me/api/portraits/men/3.jpg',
-      "calif": 8,
+      "calif": 3.5,
     },
   ]
 
   showImagen(): void{
     this.muestraImagen = !this.muestraImagen;
+  }
+
+  onCalificaClick( message: string){
+    this.alumnoTitle = message;
   }
 }
