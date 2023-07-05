@@ -13,6 +13,7 @@ import { OperasModule } from './escuela/formularios/operas/operas.module';
 import { AlumnosFilterPipe } from './escuela/alumnos-filter.pipe';
 import { CalificacionAlumComponent } from './escuela/calificacion-alum/calificacion-alum.component';
 import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-re
     SumarComponent,
     AlumnosFilterPipe,
     CalificacionAlumComponent,
-    AlumnoReactiveComponent,
+    AlumnoReactiveComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,8 @@ import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-re
     BrowserAnimationsModule,
     // Importacon de un modulo creado
     OperasModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

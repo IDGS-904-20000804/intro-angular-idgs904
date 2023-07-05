@@ -16,7 +16,7 @@ export class CalificacionAlumComponent {
   puntosCal!: number;
 
   ngOnChanges(): void{
-    this.puntosCal = (this.califica*76)/10
+    this.puntosCal = this.califica*76/10;
   }
 
   onClick(){
